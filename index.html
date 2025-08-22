@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="ru">
 <head>
-    - Эта строка критически важна для правильного отображения русского текста
+    <!-- Эта строка критически важна для правильного отображения русского текста -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Приглашение</title>
@@ -32,7 +32,7 @@
             font-size: 28px;
             font-weight: 700;
             margin-bottom: 25px;
-            color: #E6E6FA; - Лавандовый оттенок
+            color: #E6E6FA; /* Лавандовый оттенок */
         }
 
         p {
@@ -104,9 +104,9 @@
             transition: all 2s cubic-bezier(0.17, 0.84, 0.44, 1);
         }
 
-        - Стили для всплывающего окна (модала)
+        /* Стили для всплывающего окна (модала) */
         .modal {
-            display: none; - Скрыто по умолчанию
+            display: none; /* Скрыто по умолчанию */
             position: fixed;
             z-index: 1000;
             left: 0;
@@ -135,12 +135,12 @@
             to { opacity: 1; transform: scale(1); }
         }
 
-        - Тот самый сиреневый текст
+        /* Тот самый сиреневый текст */
         .modal-content p {
             color: #E6E6FA;
             font-size: 20px;
             line-height: 1.7;
-            margin-bottom: 1em; - Добавил отступ между абзацами
+            margin-bottom: 1em; /* Отступ между абзацами */
         }
         .modal-content p:last-child {
             margin-bottom: 0;
@@ -184,7 +184,7 @@
        </svg>
     </div>
 
-    - --- HTML-код всплывающего окна с новым текстом ---
+    <!-- HTML-код всплывающего окна -->
     <div id="myModal" class="modal">
         <div class="modal-content">
             <span class="close-button">&times;</span>
@@ -200,7 +200,7 @@
     const hint = document.getElementById('clickHint');
     let hintHidden = false;
 
-    // --- Получаем элементы модального окна ---
+    // Получаем элементы модального окна
     const modal = document.getElementById('myModal');
     const closeButton = document.querySelector('.close-button');
 
@@ -210,7 +210,7 @@
             hintHidden = true;
         }
         
-        // --- Показываем модальное окно ---
+        // Показываем модальное окно
         modal.style.display = 'flex';
 
         const rect = heartContainer.getBoundingClientRect();
@@ -222,7 +222,7 @@
         }
     });
 
-    // --- Функции для закрытия окна ---
+    // Функции для закрытия окна
     closeButton.addEventListener('click', () => {
         modal.style.display = 'none';
     });
